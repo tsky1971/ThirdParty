@@ -1,16 +1,14 @@
-echo off
-echo "https://github.com/zeromq/czmq#building-on-windows"
-pause
 echo "Visual Studio search"
 rem call "C:\Programme\Microsoft Visual Studio 12.0\VC\vcvarsall.bat"
 rem call "C:\Program Files\Microsoft Visual Studio 12.0\VC\vcvarsall.bat"
 rem call "C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\vcvarsall.bat"
-
 call "C:\Programme\Microsoft Visual Studio 14.0\VC\vcvarsall.bat" amd64_x86
 call "C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\vcvarsall.bat" amd64_x86
 echo "Visual Studio search END"
+pause
 
 echo "libsodium"
+pause
 if not exist libsodium (
 	git clone git://github.com/jedisct1/libsodium.git
 	pushd libsodium
@@ -36,9 +34,8 @@ if not exist libsodium (
 	popd
 )
 
-pause
-
 echo "libzmq"
+pause
 if not exist libzmq (
 	echo "libzmq NOT exist checkout..."
 	git clone https://github.com/zeromq/libzmq.git
@@ -77,6 +74,7 @@ if not exist libzmq (
 )
 
 echo "cppzmq"
+pause
 if not exist cppzmq (
 	git clone https://github.com/zeromq/cppzmq.git
 	pushd cppzmq
@@ -91,6 +89,7 @@ if not exist cppzmq (
 )
 
 echo "czmq"
+pause
 if not exist czmq (
 	git clone git://github.com/zeromq/czmq.git
 	pushd czmq
@@ -105,3 +104,4 @@ if not exist czmq (
 )
 
 echo "ENDE"
+pause
