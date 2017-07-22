@@ -1,7 +1,7 @@
 echo off
 echo "opencv"
 if not exist opencv (
-	echo "libzmq NOT exist checkout..."
+	echo "opencv NOT exist checkout..."
 	git clone https://github.com/opencv/opencv.git
 	pushd opencv	
 	popd
