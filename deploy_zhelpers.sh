@@ -1,4 +1,4 @@
 echo off
 
-xcopy zhelpers\*.* /usr/local/include/ /V/S/E/Y
+sudo cp zhelpers/*.* /usr/local/include/
 
