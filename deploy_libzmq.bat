@@ -14,4 +14,4 @@ if exist libzmq\bin\Win32\Debug\v141\ (
 	xcopy libzmq\bin\x64\Release\v141\dynamic\*.* ..\bin\x64\Release\ /V/S/E/Y
 )
 
-xcopy libzmq\include\*.* ..\include\zmq\ /V/S/E/Y
+xcopy libzmq\include\*.* ..\include\ /V/S/E/Y

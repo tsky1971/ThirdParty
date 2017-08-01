@@ -14,4 +14,4 @@ if exist czmq\bin\Win32\Debug\v141\ (
 	xcopy czmq\bin\x64\Release\v141\dynamic\*.* ..\bin\x64\Release\ /V/S/E/Y
 )
 
-xcopy czmq\include\*.* ..\include\czmq\ /V/S/E/Y
+xcopy czmq\include\*.* ..\include\ /V/S/E/Y
