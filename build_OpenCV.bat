@@ -1,8 +1,8 @@
-echo on
+echo off
 echo "build opencv"
 
 if not exist opencv (
-	echo "you to get it first"
+	echo "you should get it first"
 	
 ) else (
 	cd opencv
@@ -12,25 +12,16 @@ if not exist opencv (
 	)
 	cd build32
 		
-	cmake -G "Visual Studio 14 2015" ..
+	cmake -G "Visual Studio 15 2017" ..
 	cd ..
-
-	pause
 
 	if not exist build64 (
 		mkdir build64
 	)
 	cd build64
-	cmake -G "Visual Studio 14 2015 Win64" ..
+	cmake -G "Visual Studio 15 2017 Win64" ..
 	cd ..
 
-	pause
-
 	cmake --build build64 --config Release
-
-	pause
-
 	cmake --build build32 --config Release
-
-	pause
 )

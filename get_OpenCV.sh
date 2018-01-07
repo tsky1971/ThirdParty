@@ -6,6 +6,7 @@ if [ ! -d opencv ]
 then 
 	git clone https://github.com/opencv/opencv.git
 	cd opencv
+	git checkout 2.4
 	mkdir build
 	cd build
 	cmake ..
