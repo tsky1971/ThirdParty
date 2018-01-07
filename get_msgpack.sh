@@ -8,7 +8,7 @@ then
 	cd msgpack-c
 	mkdir build
 	cd build
-	cmake ..
+	cmake -DMSGPACK_CXX11=ON ..
 	make -j4
 	sudo make install
 	cd -
@@ -17,7 +17,7 @@ else
 	cd msgpack-c
 	git pull
 	cd build
-	cmake ..	
+	cmake -DMSGPACK_CXX11=ON ..	
 	make -j4
 	sudo make install
 	cd -
