@@ -1,17 +1,35 @@
-#!/bin/sh -e
+echo off
 
 echo "get libjpeg-turbo"
-git clone https://github.com/libjpeg-turbo/libjpeg-turbo.git
+echo "get NASM http://www.nasm.us/pub/nasm/releasebuilds/2.13.02/win64/nasm-2.13.02-installer-x64.exe"
 
-pushd libjpeg-turbo
+wget http://www.nasm.us/pub/nasm/releasebuilds/2.13.02/win64/nasm-2.13.02-installer-x64.exe
 
-mkdir build32 & pushd build32
-cmake -G "Visual Studio 14 2015" ..
-popd
+if not exist libjpeg-turbo (
+	git clone https://github.com/libjpeg-turbo/libjpeg-turbo.git
 
-mkdir build64 & pushd build64
-cmake -G "Visual Studio 14 2015 Win64" ..
-popd
+	pushd libjpeg-turbo
 
-cmake --build build32 --config Release
-cmake --build build64 --config Release
+	mkdir build32 & pushd build32
+	cmake -G "Visual Studio 14 2015" ..
+	popd
+
+	mkdir build64 & pushd build64
+	cmake -G "Visual Studio 14 2015 Win64" ..
+	popd
+	
+) else (
+	pushd libjpeg-turbo
+	
+	git pull
+
+	mkdir build32 & pushd build32
+	cmake -G "Visual Studio 14 2015" ..
+	popd
+
+	mkdir build64 & pushd build64
+	cmake -G "Visual Studio 14 2015 Win64" ..
+	popd
+	
+)
+
