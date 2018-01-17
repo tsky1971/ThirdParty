@@ -30,6 +30,3 @@ if not exist lz4 (
 	
 	popd
 )
-
-pause
-rem -DBUILD_SHARED_LIBS=ON -DBUILD_STATIC_LIBS=ON

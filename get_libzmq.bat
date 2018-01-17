@@ -1,3 +1,4 @@
+echo off
 
 echo "libzmq"
 if not exist libzmq (

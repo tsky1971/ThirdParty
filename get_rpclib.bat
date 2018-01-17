@@ -1,3 +1,4 @@
+echo off
 
 echo "rpclib"
 if not exist rpclib (

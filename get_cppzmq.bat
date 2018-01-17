@@ -1,3 +1,4 @@
+echo off
 
 echo "cppzmq"
 if not exist cppzmq (

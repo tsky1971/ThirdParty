@@ -12,5 +12,3 @@ if not exist opencv (
 	git pull	
 	popd
 )
-
-pause
