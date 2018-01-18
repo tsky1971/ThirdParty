@@ -19,4 +19,3 @@ if exist libsodium\bin\Win32\Debug\v141\ (
 :inc
 xcopy libsodium\src\libsodium\include\*.h ..\include\ /V/E/S/Y
 
-pause

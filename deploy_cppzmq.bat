@@ -1,4 +1,4 @@
 echo off
 
-xcopy cppzmq\*.hpp ..\include /V/S/E
+xcopy cppzmq\*.hpp ..\include\cppzmq\ /V/S/E
 

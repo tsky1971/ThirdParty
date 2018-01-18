@@ -5,15 +5,7 @@ if not exist opencv (
 	echo "you should get it first"
 	
 ) else (
-	cd opencv
-	
-	if not exist build32 (
-		mkdir build32
-	)
-	cd build32
-		
-	cmake -G "Visual Studio 15 2017" ..
-	cd ..
+	cd opencv	
 
 	if not exist build64 (
 		mkdir build64
@@ -23,5 +15,7 @@ if not exist opencv (
 	cd ..
 
 	cmake --build build64 --config Release
-	cmake --build build32 --config Release
+	cmake --build build64 --config Release --target INSTALL
 )
+
+pause

@@ -1,3 +1,4 @@
+
 echo off
 
 rem if not exist "C:\Program Files (x86)\CMake\" goto INSTALL_CMAKE

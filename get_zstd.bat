@@ -27,5 +27,6 @@ if not exist zstd (
 	
 	popd
 )
+pause
 
 

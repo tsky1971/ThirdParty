@@ -13,4 +13,4 @@ cmake --build build64 --config Release
 
 popd
 
-
+pause
